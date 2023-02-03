@@ -42,7 +42,7 @@ const Feature = () => {
                                     <h3>
                                         B<span>rilliance</span>
                                     </h3>
-                                    <p>Orbiz understands that its clients have unique needs and desires when it comes to finding their dream home and the company works hard to make sure that they are provided with the best possible solutions.</p>
+                                    <p>Orbiz understands unique needs and desires of the clients of finding their dream home. Our briliant minds work hard to provide quality accomodations.</p>
                                     <div class={cssClasses.media}>
                                         <div class={cssClasses.dFlex}>
                                             <img class={cssClasses.rounded_circle} src="img/testimonials/testi-1.jpg" alt="" />
@@ -66,9 +66,9 @@ const Feature = () => {
                             <div class={cssClasses.item}>
                                 <div class={cssClasses.testiItem}>
                                     <h3>
-                                        Z<span>eal</span>
+                                        Z<span>ealous</span>
                                     </h3>
-                                    <p>We have a zealous and dedicated team of professionals who strive to exceed expectations and deliver the best possible results. The company's team is constantly striving to improve and innovate in order to provide the best possible service.</p>
+                                    <p>Our zealous professional team strives to exceed expectations, improve and innovate in order to provide the best possible service.</p>
                                     <div class={cssClasses.media}>
                                         <div class={cssClasses.dFlex}>
                                             <img class={cssClasses.rounded_circle} src="img/testimonials/testi-1.jpg" alt="" />

@@ -28,19 +28,27 @@ const Footer = () => {
                         <div className={cssClasses.projectList}>
                             <div>
                                 <p>Completed:</p>
-                                <ul>
+                                <ul className={cssClasses.listType}>
                                     <Link to="/completedProjects#1">
                                         <li>Nirmal Township</li>
                                     </Link>
-                                    <li>Avalon</li>
-                                    <li>ARTEMIS</li>
-                                    <li>KIARA</li>
+                                    <Link to="/completedProjects#1">
+                                        <li>Avalon</li>
+                                    </Link>
+                                    <Link to="/completedProjects#1">
+                                        <li>ARTEMIS</li>
+                                    </Link>
+                                    <Link to="/completedProjects#1">
+                                        <li>KIARA</li>
+                                    </Link>
                                 </ul>
                             </div>
                             <div>
                                 <p>Ongoing:</p>
-                                <ul>
-                                    <li>Kanchan</li>
+                                <ul className={cssClasses.listType}>
+                                    <Link to="/Projects">
+                                        <li>Kanchan</li>
+                                    </Link>
                                 </ul>
                             </div>
                         </div>
@@ -49,7 +57,7 @@ const Footer = () => {
                         <span>Contact Us</span>
                         <div className={cssClasses.CTABtn}>
                             <Link to="/enquire">
-                                <button>Get in touch</button>
+                                <button className={cssClasses.getInTouchBtn}>Get in touch</button>
                             </Link>
                         </div>
                     </div>

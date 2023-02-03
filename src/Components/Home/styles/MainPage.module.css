@@ -877,6 +877,16 @@ i:before {
     background-clip: inherit;
 }
 
+.getInTouchBtn:hover {
+    color: #fff;
+    background-image: -webkit-gradient(linear, left top, right top, from(#70bafe), color-stop(51%, #998dff), to(#70bafe));
+    background-image: -webkit-linear-gradient(left, #70bafe 0%, #998dff 51%, #70bafe 100%);
+    background-image: -o-linear-gradient(left, #70bafe 0%, #998dff 51%, #70bafe 100%);
+    background-image: linear-gradient(to right, #70bafe 0%, #998dff 51%, #70bafe 100%);
+    border: solid 2px rgba(255, 255, 255, 1);
+    background-clip: inherit;
+}
+
 /* End Feature Area css
 ============================================================================================ */
 /* Team People Area css
@@ -2389,6 +2399,9 @@ i:before {
     display: flex;
     gap: 2rem;
 }
+.listType {
+    list-style: none;
+}
 .footer_widget_area .container2 {
     width: 33.33%;
     color: rgba(0, 0, 0, 0.8) !important;
@@ -2411,8 +2424,6 @@ i:before {
 }
 .footer_widget_area .container1 ul {
     font-size: 1rem;
-    padding-left: 2rem;
-    list-style: disc;
     font-weight: 400;
     color: rgba(0, 0, 0, 0.8);
 }
