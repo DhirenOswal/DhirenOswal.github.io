@@ -1,12 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import cssClasses from "../Home/styles/MainPage.module.css";
 import logoImg from "../../Assets/Logo/OrbizLogoH.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
     const [handleNavbar, setHandleNavbar] = useState(false);
+    const pathName = useLocation();
 
     const handleHamburgerClick = () => setHandleNavbar(!handleNavbar);
+
+    useEffect(() => {
+        console.log('Route changed')
+      setHandleNavbar(false);
+    }, [pathName]);
+    
 
     return (
         <>
@@ -86,7 +93,7 @@ const Navbar = () => {
                                 </li>
                                 <li className="w-full text-center text-2xl font-semibold text-[#374151] hover:text-[#081828] py-3">
                                     <Link to="/CompletedProjects" className={`${cssClasses.nav_link}`}>
-                                        Completed Prjoects
+                                        Completed Projects
                                     </Link>
                                 </li>
                                 <li className="w-full text-center text-2xl font-semibold text-[#374151] hover:text-[#081828] py-3">
