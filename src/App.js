@@ -12,6 +12,7 @@ const Projects = React.lazy(() => import("./Components/Projects/Projects"));
 const CompletedProjects = React.lazy(() => import("./Components/Projects/CompletedProjects"));
 const KnowledgeBank = React.lazy(() => import("./Components/KnowledgeBank/KnowledgeBank"));
 const Career = React.lazy(() => import("./Components/Career/career"));
+const AdminPanel = React.lazy(() => import("./Components/AdminPanel/AdminPanel"));
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
             <Navbar />
             <Routes>
                 <Route path="/" element={<MainPage />}></Route>
+                <Route path="/AdminPanel" element={<AdminPanel />}></Route>
                 <Route
                     exact
                     path="/about-us"
