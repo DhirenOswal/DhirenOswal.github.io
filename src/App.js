@@ -13,6 +13,7 @@ const CompletedProjects = React.lazy(() => import("./Components/Projects/Complet
 const KnowledgeBank = React.lazy(() => import("./Components/KnowledgeBank/KnowledgeBank"));
 const Career = React.lazy(() => import("./Components/Career/career"));
 const AdminPanel = React.lazy(() => import("./Components/AdminPanel/AdminPanel"));
+const EnquiryReport = React.lazy(() => import("./Components/EnqiryReport/EnquiryReport"));
 
 function App() {
     return (
@@ -20,7 +21,8 @@ function App() {
             <Navbar />
             <Routes>
                 <Route path="/" element={<MainPage />}></Route>
-                <Route path="/AdminPanel" element={<AdminPanel />}></Route>
+                <Route path="/admin-panel" element={<AdminPanel />}></Route>
+                <Route path="/enquiry-report" element={<EnquiryReport />}></Route>
                 <Route
                     exact
                     path="/about-us"

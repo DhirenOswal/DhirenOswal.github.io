@@ -16,7 +16,7 @@ const Contact = () => {
                                     <br />
                                     Head Office
                                 </h3>
-                                <p>3rd Floor, Ashtavinayak Apt., 1128 Shukrawar Peth, Sathe Colony, Near Tilak Rd Shetriya Karayalay, Behind Kothari Honda, Pune - 02</p>
+                                <p>3rd Floor, Ashtavinayak Apt., 1128 Shukrawar Peth, Sathe Colony, Near Tilak Rd Shetriya Karayalay, Behind Kothari Honda, Pune - 411002</p>
                                 <h4 className="block">
                                     <a href="tel:020-71172850">020-71172850</a>{" "}
                                 </h4>

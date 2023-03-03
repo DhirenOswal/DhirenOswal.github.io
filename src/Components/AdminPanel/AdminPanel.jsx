@@ -1,11 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import cssClasses from "./AdminPanel.module.css";
+import { Auth } from "../../firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+import { setPersistence, browserSessionPersistence } from "firebase/auth";
 
 const AdminPanel = () => {
     const [loginData, setLoginData] = useState({
         email: "",
         password: "",
     });
+    const navigate = useNavigate();
     const [validEmail, setValidEmail] = useState(true);
     const validateEmail = (email) => {
         const regExEmail = /^([a-zA-Z0-9-]+)@([a-zA-Z0-9]+)\.([a-z]{2,10})$/;
@@ -29,6 +34,45 @@ const AdminPanel = () => {
         setLoginData({ ...loginData, password: value });
         console.log(loginData);
     }
+
+    function loginUser() {
+        signInWithEmailAndPassword(Auth, loginData.email, loginData.password)
+            .then(async (res) => {
+                navigate("/enquiry-report");
+            })
+            .catch((err) => {
+                console.log("Something went wrong", err);
+            });
+
+        // setPersistence(Auth, browserSessionPersistence)
+        //     .then(() => {
+        //         // Existing and future Auth states are now persisted in the current
+        //         // session only. Closing the window would clear any existing state even
+        //         // if a user forgets to sign out.
+        //         // ...
+        //         // New sign-in will be persisted with session persistence.
+        //         return signInWithEmailAndPassword(Auth, loginData.email, loginData.password);
+        //     })
+        //     .catch((error) => {
+        //         // Handle Errors here.
+        //         const errorCode = error.code;
+        //         const errorMessage = error.message;
+        //     });
+    }
+
+    // Sign In Function
+    // function createUser() {
+    //     createUserWithEmailAndPassword(Auth, loginData.email, loginData.password)
+    //         .then(async (res) => {
+    //             const user = res.user;
+    //             console.log(res);
+    //             // navigate("/");
+    //         })
+    //         .catch((err) => {
+    //             // setErrorMsg(err.message);
+    //             console.log(err);
+    //         });
+    // }
     return (
         <div className={cssClasses.wrapper}>
             <span>Login Here</span>
@@ -74,9 +118,7 @@ const AdminPanel = () => {
                     style={{
                         marginRight: "1rem",
                     }}
-                    onClick={() => {
-                        console.log("Hiii");
-                    }}
+                    onClick={loginUser}
                 >
                     Login
                 </button>
