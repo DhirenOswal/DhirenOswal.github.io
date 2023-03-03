@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkorbiz=self.webpackChunkorbiz||[]).push([[998],{1998:function(n,e,u){u.r(e);var i=u(2791),t=u(7689),a=u(7806),c=u(184);e.default=function(){var n=(0,t.s0)();return(0,i.useEffect)((function(){a.g.onAuthStateChanged((function(e){null===e&&n("/admin-panel")}))}),[]),(0,c.jsx)("h1",{children:"Hiii"})}}}]);
+//# sourceMappingURL=998.dbbcfdfb.chunk.js.map
