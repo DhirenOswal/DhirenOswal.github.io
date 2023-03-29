@@ -32,6 +32,7 @@ const Projects = () => {
                             <SimpleSlider />
                             <div className="absolute bottom-[18rem] left-0 sm:bottom-0 sm:left-0 p-2 sm:p-6 w-11/1; bg-gradient-to-t from-[rgba(0,0,0,1)] via-[rgba(0,0,0,0.6)] to-[transparent] sm:w-[84.6%] w-full">
                                 <p className="text-white font-[Montserrat] font-bold text-lg sm:text-xl leading-8">Kanchan</p>
+                                <span className="text-white font-[Montserrat]">RERA Number : P52100045337</span>
                                 <div className="flex items-center">
                                     <div className="w-[210%] sm:w-3/4 border-r-2 border-white border-opacity-20">
                                         <div>
@@ -42,7 +43,7 @@ const Projects = () => {
                                             <span className="block text-white font-[Montserrat] font-normal text-md sm:text-xl sm:leading-8">$289.0/month</span>
                                         </div> */}
                                     </div>
-                                    <div className="w-full sm:w-1/4 px-2 sm:px-10 flex gap-x-2 sm:gap-x-14 font-[Montserrat] font-normal text-md sm:text-xl leading-4">
+                                    {/* <div className="w-full sm:w-1/4 px-2 sm:px-10 flex gap-x-2 sm:gap-x-14 font-[Montserrat] font-normal text-md sm:text-xl leading-4">
                                         <ol className="text-white">
                                             <li className="mb-6">2,345</li>
                                             <li>03</li>
@@ -51,7 +52,7 @@ const Projects = () => {
                                             <li className="mb-6">03</li>
                                             <li>01</li>
                                         </ol>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>

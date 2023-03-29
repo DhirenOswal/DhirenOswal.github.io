@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Captcha from "../../Subcomponents/Slider/Captcha/Captcha";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 import cssClasses from "../Home/styles/MainPage.module.css";
@@ -213,8 +212,6 @@ const Enquire = (setToast) => {
                         </select>
                     </div>
                 </div>
-
-                <Captcha />
                 <button type="submit" className={` ${cssClasses.btn} ${cssClasses.submit_btn}`} onClick={addTodo}>
                     Submit
                 </button>
