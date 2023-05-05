@@ -14,10 +14,8 @@ const Career = () => {
     });
     const addTodo = async (e) => {
         e.preventDefault();
-        console.log("Hiii");
         try {
             const docRef = await addDoc(collection(db, "jobOpening"), { formData });
-            console.log("Document written with ID: ", docRef.id);
         } catch (e) {
             console.error("Error adding document: ", e);
         }
@@ -28,7 +26,6 @@ const Career = () => {
     const handleFormSubmit = (e) => {
         e.preventDefault();
         const data = formData;
-        console.log(data);
         clearFormData();
         document.getElementById("enquire-form").reset();
     };
@@ -67,7 +64,6 @@ const Career = () => {
 
     const handleRadioChange = (e) => {
         const value = e.target.value;
-        console.log(value);
         setFormData({ ...formData, department: value });
     };
 

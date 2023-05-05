@@ -16,10 +16,8 @@ const Enquire = (setToast) => {
 
     const addTodo = async (e) => {
         e.preventDefault();
-        console.log("Hiii");
         try {
             const docRef = await addDoc(collection(db, "enquiry"), { formData });
-            console.log("Document written with ID: ", docRef.id);
             setToast("We've received your enquiry, We'll reach out to you soon!");
         } catch (e) {
             console.error("Error adding document: ", e);
@@ -31,7 +29,6 @@ const Enquire = (setToast) => {
     const handleFormSubmit = (e) => {
         e.preventDefault();
         const data = formData;
-        console.log(data);
         clearFormData();
         document.getElementById("enquire-form").reset();
     };
@@ -70,13 +67,11 @@ const Enquire = (setToast) => {
 
     const handleProjectChange = (e) => {
         const value = e.target.value;
-        console.log(value);
         setFormData({ ...formData, project: value });
     };
 
     const handleRadioChange = (e) => {
         const value = e.target.value;
-        console.log(value);
         setFormData({ ...formData, source: value });
     };
 
@@ -111,7 +106,6 @@ const Enquire = (setToast) => {
         } else {
             formData.flatDetails.push(val);
         }
-        console.log(formData.flatDetails);
     };
 
     return (

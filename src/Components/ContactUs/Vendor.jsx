@@ -17,11 +17,8 @@ const Vendor = () => {
     const [validPhone, setValidPhone] = useState(true);
     const addTodo = async (e) => {
         e.preventDefault();
-        console.log(formData);
-        console.log("Hiii");
         try {
             const docRef = await addDoc(collection(db, "vendor"), { formData });
-            console.log("Document written with ID: ", docRef.id);
         } catch (e) {
             console.error("Error adding document: ", e);
         }
@@ -30,7 +27,6 @@ const Vendor = () => {
     const handleFormSubmit = (e) => {
         e.preventDefault();
         const data = formData;
-        console.log(data);
         clearFormData();
         document.getElementById("enquire-form").reset();
     };
@@ -58,7 +54,6 @@ const Vendor = () => {
 
     const handlePhoneInputChange = (e) => {
         const value = e.target.value;
-        console.log(e.target.value);
         const isValid = validatePhone(value);
         if (isValid) {
             setValidPhone(true);

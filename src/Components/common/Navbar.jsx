@@ -10,7 +10,6 @@ const Navbar = () => {
     const handleHamburgerClick = () => setHandleNavbar(!handleNavbar);
 
     useEffect(() => {
-        console.log('Route changed')
       setHandleNavbar(false);
     }, [pathName]);
     

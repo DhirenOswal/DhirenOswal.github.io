@@ -32,7 +32,6 @@ const AdminPanel = () => {
     function handlePasswordChange(e) {
         const value = e.target.value;
         setLoginData({ ...loginData, password: value });
-        console.log(loginData);
     }
 
     function loginUser() {
@@ -65,12 +64,10 @@ const AdminPanel = () => {
     //     createUserWithEmailAndPassword(Auth, loginData.email, loginData.password)
     //         .then(async (res) => {
     //             const user = res.user;
-    //             console.log(res);
     //             // navigate("/");
     //         })
     //         .catch((err) => {
     //             // setErrorMsg(err.message);
-    //             console.log(err);
     //         });
     // }
     return (
